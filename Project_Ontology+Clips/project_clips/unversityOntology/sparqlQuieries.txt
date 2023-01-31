@@ -1,0 +1,44 @@
+PREFIX uri: <http://www.semanticweb.org/dell/ontologies/2022/11/untitled-ontology-5#>
+
+Q1
+
+SELECT ?TA_Name
+	WHERE{?department uri:departmentName "CS"^^xsd:string.
+	?department uri:hasTA ?TA.
+	?TA uri:_name ?TA_Name}
+ 
+
+/////////////////////////
+Q2
+
+SELECT ?courseName 
+	WHERE{?student uri:studentID "111"^^xsd:string.
+	?student uri:isStudying ?course.
+	?course uri:_name ?courseName
+	}
+/////////////////////////
+Q3
+
+SELECT ?courseName
+	WHERE{?faculty uri:_name "FCAI"^^xsd:string. 
+	                ?faculty uri:hasDepartment ?department.
+	                ?department uri:offer ?course.
+	                ?course uri:_name ?courseName}
+
+/////////////////////////
+Q4
+
+SELECT  ?lecturerName
+	WHERE {
+     	                ?faculty uri:_name "FCAI"^^xsd:string. 
+	                ?faculty uri:hasDepartment ?department.
+	                ?department uri:hasLecturer  ?lecturer.
+	                ?lecturer uri:_name ?lecturerName           
+	      }
+///////////////////////////
+Q5
+
+SELECT ?facultyName
+	WHERE{?university uri:_name "CU"^^xsd:string. 
+	                ?university uri:contains ?faculty.
+	                ?faculty uri:_name ?facultyName.} 
