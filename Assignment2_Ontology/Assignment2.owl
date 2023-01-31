@@ -1,0 +1,768 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#"
+     xml:base="http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#compatibleWith -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#compatibleWith">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#Gate"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#Type"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#consistsOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#consistsOf">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#Airfield"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#Gate"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#GroundSurface"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#hasExit -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#hasExit">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#Runway"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#Taxiway"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#hasFacilities -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#hasFacilities">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#Airport"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#AirTraffic"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#Airfield"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#MaintenanceShops"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#Passengers’Terminals"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#hasPosition -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#hasPosition">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#isPositionOf"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#AirCraft"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#GroundSurface"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#isPositionOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#isPositionOf">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#GroundSurface"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#AirCraft"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#airCraftType -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#airCraftType">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#AirCraft"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#Type"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#aircraftID -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#aircraftID">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#AirCraft"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#airfieldID -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#airfieldID">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#Airfield"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+                <owl:withRestrictions rdf:parseType="Collection">
+                    <rdf:Description>
+                        <xsd:maxLength rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</xsd:maxLength>
+                    </rdf:Description>
+                </owl:withRestrictions>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#capacity -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#capacity">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#Gate"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#class -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#class">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#AirCraft"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#class"/>
+                        <owl:hasValue>Narrow Body</owl:hasValue>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#class"/>
+                        <owl:hasValue>Wide Body</owl:hasValue>
+                    </owl:Restriction>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#elevation -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#elevation">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#Airfield"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#engineCount -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#engineCount">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#AirCraft"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#length -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#length">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#Runway"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#manufacturer -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#manufacturer">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#AirCraft"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#maxSpeed -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#maxSpeed">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#AirCraft"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#name -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#name">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#Airport"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#GroundSurface"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#number -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#number">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#Gate"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#passengersCapacity -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#passengersCapacity">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#AirCraft"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#status -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#status">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#Taxiway"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#status"/>
+                        <owl:hasValue>Locked</owl:hasValue>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#status"/>
+                        <owl:hasValue>Open</owl:hasValue>
+                    </owl:Restriction>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#type -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#type">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#Runway"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#type"/>
+                        <owl:hasValue>Asphalt</owl:hasValue>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#type"/>
+                        <owl:hasValue>Grass</owl:hasValue>
+                    </owl:Restriction>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#usageType -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#usageType">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#Airfield"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#usageType"/>
+                        <owl:hasValue>Charter</owl:hasValue>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#usageType"/>
+                        <owl:hasValue>Civilian</owl:hasValue>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#usageType"/>
+                        <owl:hasValue>Military</owl:hasValue>
+                    </owl:Restriction>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#AirCraft -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#AirCraft">
+        <owl:hasKey rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#aircraftID"/>
+        </owl:hasKey>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#AirTraffic -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#AirTraffic"/>
+    
+
+
+    <!-- http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#Airfield -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#Airfield">
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#GroundSurface"/>
+        <owl:hasKey rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#airfieldID"/>
+        </owl:hasKey>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#Airport -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#Airport"/>
+    
+
+
+    <!-- http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#Gate -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#Gate"/>
+    
+
+
+    <!-- http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#GroundSurface -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#GroundSurface"/>
+    
+
+
+    <!-- http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#MaintenanceShops -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#MaintenanceShops"/>
+    
+
+
+    <!-- http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#Runway -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#Runway">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#GroundSurface"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#hasExit"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#Taxiway"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#Taxiway -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#Taxiway">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#GroundSurface"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#Type -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#Type"/>
+    
+
+
+    <!-- http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#Passengers’Terminals -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#Passengers’Terminals"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#aircraft1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#aircraft1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#AirCraft"/>
+        <hasPosition rdf:resource="http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#runway1"/>
+        <airCraftType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A330</airCraftType>
+        <aircraftID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SKU10</aircraftID>
+        <class rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wide Body</class>
+        <engineCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</engineCount>
+        <manufacturer rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AirBus</manufacturer>
+        <maxSpeed rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">900</maxSpeed>
+        <passengersCapacity rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">200</passengersCapacity>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#aircraft2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#aircraft2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#AirCraft"/>
+        <hasPosition rdf:resource="http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#runway1"/>
+        <airCraftType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A380</airCraftType>
+        <aircraftID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">KMN20</aircraftID>
+        <class rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wide Body</class>
+        <engineCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</engineCount>
+        <manufacturer rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AirBus</manufacturer>
+        <maxSpeed rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1000</maxSpeed>
+        <passengersCapacity rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">300</passengersCapacity>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#aircraft3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#aircraft3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#AirCraft"/>
+        <hasPosition rdf:resource="http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#runway3"/>
+        <airCraftType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Boeing737</airCraftType>
+        <aircraftID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SKU10</aircraftID>
+        <class rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Narrow Body</class>
+        <engineCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</engineCount>
+        <manufacturer rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Boeing</manufacturer>
+        <maxSpeed rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">800</maxSpeed>
+        <passengersCapacity rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">150</passengersCapacity>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#aircraft4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#aircraft4">
+        <rdf:type rdf:resource="http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#AirCraft"/>
+        <hasPosition rdf:resource="http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#taxiway4"/>
+        <airCraftType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Boeing787</airCraftType>
+        <aircraftID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UWD20</aircraftID>
+        <class rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Narrow Body</class>
+        <engineCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</engineCount>
+        <manufacturer rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Boeing</manufacturer>
+        <maxSpeed rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1000</maxSpeed>
+        <passengersCapacity rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">100</passengersCapacity>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#airfield1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#airfield1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#Airfield"/>
+        <consistsOf rdf:resource="http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#gate1"/>
+        <consistsOf rdf:resource="http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#gate2"/>
+        <consistsOf rdf:resource="http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#runway1"/>
+        <consistsOf rdf:resource="http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#runway2"/>
+        <consistsOf rdf:resource="http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#taxiway1"/>
+        <consistsOf rdf:resource="http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#taxiway2"/>
+        <airfieldID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HELA</airfieldID>
+        <elevation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">200</elevation>
+        <usageType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Military</usageType>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#airfield2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#airfield2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#Airfield"/>
+        <consistsOf rdf:resource="http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#gate3"/>
+        <consistsOf rdf:resource="http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#gate4"/>
+        <consistsOf rdf:resource="http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#gate5"/>
+        <consistsOf rdf:resource="http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#runway3"/>
+        <consistsOf rdf:resource="http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#runway4"/>
+        <consistsOf rdf:resource="http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#taxiway3"/>
+        <consistsOf rdf:resource="http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#taxiway4"/>
+        <airfieldID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CAI</airfieldID>
+        <elevation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">300</elevation>
+        <usageType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Civilian</usageType>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#airport1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#airport1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#Airport"/>
+        <hasFacilities rdf:resource="http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#airfield2"/>
+        <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cairo International Airport</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#airport2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#airport2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#Airport"/>
+        <hasFacilities rdf:resource="http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#airfield1"/>
+        <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Almaza Airport</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#gate1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#gate1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#Gate"/>
+        <compatibleWith rdf:resource="http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#type1"/>
+        <compatibleWith rdf:resource="http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#type2"/>
+        <compatibleWith rdf:resource="http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#type3"/>
+        <capacity rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">350</capacity>
+        <number rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A1</number>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#gate2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#gate2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#Gate"/>
+        <compatibleWith rdf:resource="http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#type2"/>
+        <compatibleWith rdf:resource="http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#type3"/>
+        <capacity rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">300</capacity>
+        <number rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A2</number>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#gate3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#gate3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#Gate"/>
+        <compatibleWith rdf:resource="http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#type4"/>
+        <compatibleWith rdf:resource="http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#type5"/>
+        <compatibleWith rdf:resource="http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#type6"/>
+        <capacity rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">150</capacity>
+        <number rdf:datatype="http://www.w3.org/2001/XMLSchema#string">B1</number>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#gate4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#gate4">
+        <rdf:type rdf:resource="http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#Gate"/>
+        <compatibleWith rdf:resource="http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#type1"/>
+        <capacity rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">300</capacity>
+        <number rdf:datatype="http://www.w3.org/2001/XMLSchema#string">B2</number>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#gate5 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#gate5">
+        <rdf:type rdf:resource="http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#Gate"/>
+        <compatibleWith rdf:resource="http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#type6"/>
+        <capacity rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">100</capacity>
+        <number rdf:datatype="http://www.w3.org/2001/XMLSchema#string">C1</number>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#runway1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#runway1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#Runway"/>
+        <hasExit rdf:resource="http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#taxiway2"/>
+        <length rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1200</length>
+        <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">05C</name>
+        <type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Grass</type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#runway2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#runway2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#Runway"/>
+        <hasExit rdf:resource="http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#taxiway1"/>
+        <length rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1500</length>
+        <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">14D</name>
+        <type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Asphalt</type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#runway3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#runway3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#Runway"/>
+        <hasExit rdf:resource="http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#taxiway3"/>
+        <length rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1200</length>
+        <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">06D</name>
+        <type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Asphalt</type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#runway4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#runway4">
+        <rdf:type rdf:resource="http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#Runway"/>
+        <hasExit rdf:resource="http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#taxiway4"/>
+        <length rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2000</length>
+        <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">02E</name>
+        <type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Asphalt</type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#taxiway1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#taxiway1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#Taxiway"/>
+        <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A</name>
+        <status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Open</status>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#taxiway2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#taxiway2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#Taxiway"/>
+        <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M</name>
+        <status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Locked</status>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#taxiway3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#taxiway3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#Taxiway"/>
+        <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">B</name>
+        <status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Locked</status>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#taxiway4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#taxiway4">
+        <rdf:type rdf:resource="http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#Taxiway"/>
+        <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">K</name>
+        <status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Open</status>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#type1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#type1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#Type"/>
+        <airCraftType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AirBusA320</airCraftType>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#type2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#type2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#Type"/>
+        <airCraftType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AirBusA330</airCraftType>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#type3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#type3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#Type"/>
+        <airCraftType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AirBusA380</airCraftType>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#type4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#type4">
+        <rdf:type rdf:resource="http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#Type"/>
+        <airCraftType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Boeing737</airCraftType>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#type5 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#type5">
+        <rdf:type rdf:resource="http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#Type"/>
+        <airCraftType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Boeing767</airCraftType>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#type6 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#type6">
+        <rdf:type rdf:resource="http://www.semanticweb.org/egypt_laptop/ontologies/2022/11/untitled-ontology-3#Type"/>
+        <airCraftType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Boeing787</airCraftType>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
